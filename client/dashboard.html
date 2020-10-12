@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>WalkMeter</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">WalkMeter</a>
+        <!-- <nav class="nav">
+          <a href="#" class="nav__link"></a>
+          <a href="#" class="nav__link"></a>
+          <a href="#" class="nav__link"></a>
+        </nav> -->
+      </div>
+    </header>
+    <!-- Header Finish -->
+
+    <!-- Main Start -->
+    <main class="main">
+      <div class="container">
+        <h1 class="title">Dashboard</h1>
+        <div class="separator"></div>
+
+        <!-- Canvas Start -->
+        <div class="wrapper">
+          <div class="canvasWrapper">
+            <div id="canvas" class="canvas"></div>
+          </div>
+        </div>
+        <div class="controllers">
+          <select name="delays" id="delaySelect" class="delays">
+            <option value="1" selected disabled>Time Delay</option>
+            <option value="0.5">0.5X Delay</option>
+            <option value="1">1X Delay</option>
+            <option value="2">2X Delay</option>
+            <option value="5">5X Delay</option>
+          </select>
+
+          <button id="runButton" class="btn">Run</button>
+          <button id="resetButton" class="btn">Reset</button>
+        </div>
+        <!-- Canvas Finish -->
+
+        <!-- Tables Start  -->
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Speed</th>
+              <th>Cadence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="active-row">
+              <td>Value</td>
+              <td id="speed">0</td>
+              <td id="cadence">0</td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Step length</th>
+              <th>Step width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="active-row">
+              <td>Value</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Tables Finish -->
+      </div>
+    </main>
+    <!-- Main Finish -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">
+          &copy; 2020 WalkMeter
+        </p>
+      </div>
+    </footer>
+    <!-- Footer Finish -->
+
+    <!-- JS -->
+    <script src="js/axios.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
